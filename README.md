@@ -5,7 +5,7 @@ Home: https://github.com/cheginit/hydrodata
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A portal to access hydrology and climatology data
 
