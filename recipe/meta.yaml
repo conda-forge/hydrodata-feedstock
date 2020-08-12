@@ -1,18 +1,18 @@
 {% set name = "hydrodata" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/cheginit/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: bdf61e495aa6f59ffb8f8312eada0b9a6e145e08b57da7311ff19504480ea462
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 64a920d2dd3b8e6187ab4d9da5310f0d3f5833d1ff930f8366cced665245c7f0
 
 build:
   noarch: python
-  number: 2
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -21,20 +21,14 @@ requirements:
     - setuptools_scm
   run:
     - python >=3.6
-    - owslib
-    - pandas
     - matplotlib-base
-    - xarray
-    - scipy
     - lxml
-    - geopandas
-    - geojson
     - folium
-    - rasterio
-    - pyproj
-    - networkx
-    - simplejson
-    - defusedxml
+    - py3dep
+    - pydaymet
+    - pygeoogc
+    - pygeoutils
+    - pynhd
 
 test:
   imports:
@@ -45,12 +39,12 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'A portal to access hydrology and climatology data'
+  summary: A portal to access hydrology and climatology data
 
   description: |
-      Hydrodata is a python library designed to aid in watershed analysis.
-      It provides easy and consistent access to a handful of hydrology and
-      climatology databases with some helper functions for visualization.
+    Hydrodata is a python library designed to aid in watershed analysis.
+    It provides easy and consistent access to a handful of hydrology and
+    climatology databases with some helper functions for visualization.
   doc_url: https://hydrodata.readthedocs.io
   dev_url: https://github.com/cheginit/hydrodata
 
