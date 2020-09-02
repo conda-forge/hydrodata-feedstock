@@ -1,5 +1,5 @@
 {% set name = "hydrodata" %}
-{% set version = "0.7.2" %}
+{% set version = "0.7.3b0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5f3aa5bec0f550091ac14348f4db437bb3d8c5d764e56d47f018a2922f77bec6
+  sha256: 3661037ead8e7af805c8b1b3e09cc142948468cd940775d42ec21a3c331f3587
 
 build:
   noarch: python
