@@ -1,5 +1,5 @@
 {% set name = "hydrodata" %}
-{% set version = "0.7.3b0" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3661037ead8e7af805c8b1b3e09cc142948468cd940775d42ec21a3c331f3587
+  sha256: adcd69e85d31436b8a0c2ee277d1805019a5e14eba0ca00c03124ff0312f0222
 
 build:
   noarch: python
@@ -22,7 +22,6 @@ requirements:
   run:
     - python >=3.6
     - matplotlib-base
-    - lxml
     - folium
     - py3dep
     - pydaymet
