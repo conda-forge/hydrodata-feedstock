@@ -5,9 +5,13 @@ Home: https://github.com/cheginit/hydrodata
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hydrodata-feedstock/blob/master/LICENSE.txt)
 
 Summary: A portal to access hydrology and climatology data
+
+Development: https://github.com/cheginit/hydrodata
+
+Documentation: https://hydrodata.readthedocs.io
 
 Hydrodata is a python library designed to aid in watershed analysis.
 It provides easy and consistent access to a handful of hydrology and
