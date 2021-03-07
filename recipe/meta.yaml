@@ -30,7 +30,7 @@ requirements:
 
 test:
   imports:
-    - hydrodata
+    - pygeohydro
   commands:
     - pip check
   requires:
