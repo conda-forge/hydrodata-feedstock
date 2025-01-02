@@ -7,18 +7,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hydrodata-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/hydrodata-{{ version }}.tar.gz
   sha256: ee56400400de6a2af36225b752ee7c676f3af39d1fe45e796885f01169f79e74
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
   run:
     - pygeoogc
     - pygeoutils
@@ -26,7 +26,7 @@ requirements:
     - pygeohydro
     - py3dep
     - pydaymet
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -35,6 +35,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/hydrodata/
